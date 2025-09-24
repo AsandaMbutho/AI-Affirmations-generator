@@ -1,59 +1,111 @@
 body {
   background: #a7d8de;
+  font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
-a {
-  color: #885df1;
-}
-header {
-  margin-bottom: 30px;
-}
-form {
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  margin-bottom: 30px;
-}
+
 .container {
   margin: 120px auto;
   max-width: 600px;
+  padding: 0 20px;
 }
-.instructions {
-  padding: 16px;
-  border: 1px solid rgba(39, 33, 66, 0.5);
-  width: 80%;
-  font-size: 16px;
-  border-radius: 50px;
-  line-height: 20px;
-  color: #272044;
-}
-.submit-button {
-  margin-left: 10px;
-  background: #885df1;
-  color: white;
-  border: none;
-  width: 150px;
-  font-size: 16px;
-  border-radius: 50px;
-  padding: 14px 24px;
-}
-.affirmation {
-  font-size: 16px;
-  background-color: #fff;
-  padding: 20px;
-  line-height: 2;
-  border-left: 3px solid #885df1;
-  box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
-  display: none;
-}
-.affirmations-show {
-  display: block;
+
+header {
+  margin-bottom: 30px;
 }
 
 footer {
   text-align: center;
   font-size: 13px;
   margin-top: 30px;
+}
+
+a {
+  color: #885df1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.instructions {
+  width: 80%;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #272044;
+  border: 1px solid rgba(39, 33, 66, 0.5);
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+}
+
+.submit-button {
+  width: 150px;
+  padding: 14px 24px;
+  font-size: 16px;
+  color: white;
+  background: #885df1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #7a4ee0;
+}
+
+.affirmation {
+  display: none;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 2;
+  background-color: #fff;
+  border-left: 3px solid #885df1;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0px 4px 30px rgba(39, 33, 66, 0.03);
+  clear: both;
+}
+
+.affirmation.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 60px auto;
+    padding: 0 15px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instructions {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .affirmation {
+    max-width: 100%;
+  }
 }

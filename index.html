@@ -7,47 +7,50 @@
     <title>AI Affirmations Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to your daily Affirmations🌈</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          class="instructions"
-          placeholder="What do you want to focus on today?"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input
-          type="submit"
-          class="submit-button"
-          value="Generate Affirmation"
-        />
+    <div class="container">
+      <header>
+        <h1>Welcome to your daily Affirmations 🌈</h1>
+      </header>
+
+      <main>
+        <form id="affirmation-form">
+          <input
+            type="text"
+            class="instructions"
+            placeholder="What do you want to focus on today?"
+            required
+            autocomplete="off"
+            autofocus
+          />
+          <input
+            type="submit"
+            class="submit-button"
+            value="Generate Affirmation"
+          />
+        </form>
+
         <div class="affirmation"></div>
-      </form>
+      </main>
 
-      <div id="affirmation-output" class="hidden"></div>
-    </main>
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/AsandaMbutho" target="_blank">
+          Asanda Mbutho
+        </a>
+        – It is
+        <a
+          href="https://github.com/AsandaMbutho/AI-Affirmations-generator"
+          target="_blank"
+        >
+          open-sourced on GitHub
+        </a>
+        and
+        <a href="https://ai-affirmations.netlify.app/" target="_blank">
+          hosted on Netlify </a
+        >.
+      </footer>
+    </div>
 
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/AsandaMbutho" target="_blank"
-        >Asanda Mbutho</a
-      >
-      it is
-      <a
-        href="https://github.com/AsandaMbutho/AI-Affirmations-generator"
-        target="_blank"
-      >
-        Open sourced on GitHub</a
-      >
-      and
-      <a href="https://ai-affirmations.netlify.app/" target="_blank"
-        >hosted on netlify.</a
-      >
-    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
