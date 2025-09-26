@@ -8,6 +8,7 @@ const suggestions = [
   "success",
   "self-care",
 ];
+
 const randomSuggestion =
   suggestions[Math.floor(Math.random() * suggestions.length)];
 const suggestionElement = document.getElementById("suggestion");
@@ -61,5 +62,7 @@ async function generateAffirmation(event) {
 }
 
 document
-  .getElementById("affirmation-form")
-  .addEventListener("submit", generateAffirmation);
+  .getElementById("suggestion-container")
+  .addEventListener("click", () => {
+    document.getElementById("user-focus").value = randomSuggestion;
+  });

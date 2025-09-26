@@ -14,11 +14,6 @@
 
       <main>
         <form id="affirmation-form">
-          <label for="user-focus" class="prompt">
-            🌸 What area of your life would you like an affirmation for today?
-            <br />
-            (Try <span id="suggestion"></span>)
-          </label>
           <input
             type="text"
             id="user-focus"
@@ -28,6 +23,11 @@
             autocomplete="off"
             autofocus
           />
+
+          <div id="suggestion-container">
+            🌸 Try: <span id="suggestion"></span>
+          </div>
+
           <input
             type="submit"
             class="submit-button"

@@ -110,3 +110,11 @@ form {
     max-width: 100%;
   }
 }
+
+#suggestion-container {
+  font-size: 14px;
+  color: rgba(39, 33, 66, 0.5);
+  margin-top: 5px;
+  text-align: left;
+  cursor: pointer;
+}
