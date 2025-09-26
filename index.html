@@ -14,10 +14,16 @@
 
       <main>
         <form id="affirmation-form">
+          <label for="user-focus" class="prompt">
+            🌸 What area of your life would you like an affirmation for today?
+            <br />
+            (Try <span id="suggestion"></span>)
+          </label>
           <input
             type="text"
+            id="user-focus"
             class="instructions"
-            placeholder="What do you want to focus on today?"
+            placeholder="e.g. confidence, health, career"
             required
             autocomplete="off"
             autofocus
@@ -51,7 +57,6 @@
       </footer>
     </div>
 
-    <!-- Load TypewriterJS -->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="src/index.js"></script>
   </body>

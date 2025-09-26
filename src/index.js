@@ -1,7 +1,27 @@
+const suggestions = [
+  "confidence",
+  "health",
+  "career",
+  "love",
+  "peace",
+  "happiness",
+  "success",
+  "self-care",
+];
+const randomSuggestion =
+  suggestions[Math.floor(Math.random() * suggestions.length)];
+const suggestionElement = document.getElementById("suggestion");
+suggestionElement.innerText = randomSuggestion;
+
+suggestionElement.style.cursor = "pointer";
+suggestionElement.addEventListener("click", () => {
+  document.getElementById("user-focus").value = randomSuggestion;
+});
+
 async function generateAffirmation(event) {
   event.preventDefault();
 
-  const userInput = document.querySelector(".instructions").value.trim();
+  const userInput = document.getElementById("user-focus").value.trim();
   const affirmationElement = document.querySelector(".affirmation");
 
   affirmationElement.classList.add("show");
