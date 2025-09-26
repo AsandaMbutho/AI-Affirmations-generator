@@ -5,7 +5,8 @@ async function generateAffirmation(event) {
   const affirmationElement = document.querySelector(".affirmation");
 
   affirmationElement.classList.add("show");
-  affirmationElement.innerHTML = "<em>✨ Generating your affirmation...</em>";
+  affirmationElement.innerHTML =
+    "<p><strong>✨ Generating your affirmation... ✨</strong></p>";
 
   try {
     const apiKey = "1e727d4ba820234do43d1fdac4t01e53";

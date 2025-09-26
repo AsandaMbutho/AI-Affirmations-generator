@@ -72,13 +72,14 @@ form {
   max-width: 80%;
   margin: 0 auto;
   padding: 20px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 2;
   background-color: #fff;
   border-left: 3px solid #885df1;
   border-radius: 0 8px 8px 0;
   box-shadow: 0px 4px 30px rgba(39, 33, 66, 0.03);
   clear: both;
+  font-weight: 500;
 }
 
 .affirmation.show {
