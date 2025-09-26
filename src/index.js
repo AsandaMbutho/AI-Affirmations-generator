@@ -14,10 +14,11 @@ const randomSuggestion =
 const suggestionElement = document.getElementById("suggestion");
 suggestionElement.innerText = randomSuggestion;
 
-suggestionElement.style.cursor = "pointer";
-suggestionElement.addEventListener("click", () => {
-  document.getElementById("user-focus").value = randomSuggestion;
-});
+document
+  .getElementById("suggestion-container")
+  .addEventListener("click", () => {
+    document.getElementById("user-focus").value = randomSuggestion;
+  });
 
 async function generateAffirmation(event) {
   event.preventDefault();
@@ -48,7 +49,7 @@ async function generateAffirmation(event) {
     const firstAffirmation = affirmations[0];
 
     affirmationElement.innerHTML = "";
-    new Typewriter(".affirmation", {
+    new Typewriter(affirmationElement, {
       strings: `About <strong>${userInput}</strong>:<br><br>"${firstAffirmation}"`,
       autoStart: true,
       delay: 30,
@@ -62,7 +63,5 @@ async function generateAffirmation(event) {
 }
 
 document
-  .getElementById("suggestion-container")
-  .addEventListener("click", () => {
-    document.getElementById("user-focus").value = randomSuggestion;
-  });
+  .getElementById("affirmation-form")
+  .addEventListener("submit", generateAffirmation);

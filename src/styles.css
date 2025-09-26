@@ -33,13 +33,14 @@ a:hover {
 
 form {
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  flex-direction: column;
   gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 .instructions {
-  width: 80%;
+  width: 100%;
   padding: 16px;
   font-size: 16px;
   line-height: 20px;
@@ -70,7 +71,7 @@ form {
   display: none;
   width: 100%;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   padding: 20px;
   font-size: 20px;
   line-height: 2;
@@ -86,35 +87,29 @@ form {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .container {
-    margin: 60px auto;
-    padding: 0 15px;
-  }
-
-  form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .instructions {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .submit-button {
-    width: 100%;
-  }
-
-  .affirmation {
-    max-width: 100%;
-  }
-}
-
 #suggestion-container {
   font-size: 14px;
   color: rgba(39, 33, 66, 0.5);
   margin-top: 5px;
   text-align: left;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 60px auto;
+    padding: 0 15px;
+  }
+
+  .affirmation {
+    max-width: 100%;
+  }
+
+  .instructions {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }
